@@ -20,12 +20,12 @@ ReactDOM.render(
         <Router>
           <Menu />
           <Switch>
-            <Route path="/" component={App} exact/>
+            <Route path="/agregar-cliente" component={App} exact/>
             <Route path="/lista" component={ClientList}/>
             <Route path="/info/:id" component={ClientInfo}/>
             <Route path="/editar/:id" component={EditClient}/>
             <Route path="/actividades" component={Activities}/>
-            <Route path="/asistencia" component={Attendance}/>
+            <Route path="/" component={Attendance}/>
           </Switch>
         </Router>
  

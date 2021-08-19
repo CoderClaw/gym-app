@@ -12,8 +12,8 @@ function Menu() {
         >
             <h1>GYM APP</h1>
             <Nav>
-                
-                <Nav.Link className="text-white" as={Link} to="/">Home</Nav.Link>
+                <Nav.Link className="text-white" as={Link} to="/">Asistencia</Nav.Link>
+                <Nav.Link className="text-white" as={Link} to="/agregar-cliente">Agregar Cliente</Nav.Link>
                 <Nav.Link className="text-white" as={Link} to="/lista">Lista de clientes</Nav.Link>
                 <Nav.Link className="text-white" as={Link} to="/actividades">Actividades</Nav.Link>
             </Nav>

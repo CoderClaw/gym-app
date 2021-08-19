@@ -58,12 +58,22 @@ function FormComponent(){
 
   function handleSubmit(ev){
     ev.preventDefault()
-
+    const newArr =[]
+     activitySelect.forEach((act)=>{
+        activities.forEach(a=>{
+         if(a.actividad===act){
+           let newA = {...a}
+           newA.fecha = fecha
+            newArr.push(newA)
+         }
+       })
+     })
+     
     db.collection('clientes').doc(dni).set(
       {
           nombre:nombre,
           dni: dni,
-          actividades: activitySelect,
+          actividades: newArr,
           fechaDeIngreso: fecha
       }
   ).then(()=>{

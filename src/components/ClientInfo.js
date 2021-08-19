@@ -14,14 +14,30 @@ function ClientInfo() {
     
     return (
         <Container className="mt-3">
-            <Card>
+            <Card className="text-center">
                 <Card.Header>
-                    <Card.Title>{clientData.nombre}</Card.Title>
+                    <Card.Title>Nombre: {clientData.nombre}</Card.Title>
                 </Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        {clientData.dni}
+                        DNI: {clientData.dni}
                     </Card.Text>
+                    <Card.Text>
+                        Telefono: {clientData.dni}
+                    </Card.Text>
+                   <Container>
+                       {    (clientData.actividades !==undefined)
+                            ?
+                           clientData.actividades.map((act,index)=>{
+                            return <Container key={index} className="mb-3">
+                                        <Card.Text>actividad:  {act.actividad}</Card.Text>
+                                        <Card.Text>Clases Restantes:  {act.clases}</Card.Text>
+                                        <Card.Text>Fecha de Inicio:  {act.fecha}</Card.Text>
+                                    </Container>
+                           })
+                           :<h2>. . . Cargando</h2>
+                       }
+                   </Container>
                 </Card.Body>
             </Card>
         </Container>

@@ -27,7 +27,8 @@ function FormActivity() {
         db.collection('actividades').doc(actividad).set(
           {
               actividad:actividad,
-              clases: clases
+              clases: clases,
+              fecha: ''
           }
       ).then(()=>console.log('succes'))
       .catch(err => console.log(err))
